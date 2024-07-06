@@ -11,7 +11,6 @@ from .models import Book, Genre
 # Create your views here.
 def index(request):
     books = Book.objects.all()
-    
     context = {"books": books}
     return render(request, 'bookly_nest/index.html', context)
 
